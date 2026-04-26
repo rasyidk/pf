@@ -1,0 +1,18 @@
+services:
+  portfolio-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio-website
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: unless-stopped
+    networks:
+      - portfolio-network
+
+networks:
+  portfolio-network:
+    driver: bridge

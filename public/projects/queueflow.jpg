@@ -1,0 +1,28 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#0d0d0d"/>
+  <rect x="1" y="1" width="598" height="398" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+  
+  <!-- Corner brackets -->
+  <path d="M 20 20 L 20 40 M 20 20 L 40 20" stroke="#a78bfa" stroke-width="2" fill="none"/>
+  <path d="M 580 20 L 580 40 M 580 20 L 560 20" stroke="#a78bfa" stroke-width="2" fill="none"/>
+  <path d="M 20 380 L 20 360 M 20 380 L 40 380" stroke="#a78bfa" stroke-width="2" fill="none"/>
+  <path d="M 580 380 L 580 360 M 580 380 L 560 380" stroke="#a78bfa" stroke-width="2" fill="none"/>
+  
+  <!-- Icon - Queue/Flow -->
+  <rect x="240" y="170" width="30" height="30" fill="none" stroke="#8b5cf6" stroke-width="3" rx="4"/>
+  <path d="M 270 185 L 290 185" stroke="#8b5cf6" stroke-width="3"/>
+  <path d="M 285 180 L 290 185 L 285 190" stroke="#8b5cf6" stroke-width="3" fill="none"/>
+  
+  <rect x="290" y="170" width="30" height="30" fill="none" stroke="#8b5cf6" stroke-width="3" rx="4"/>
+  <path d="M 320 185 L 340 185" stroke="#8b5cf6" stroke-width="3"/>
+  <path d="M 335 180 L 340 185 L 335 190" stroke="#8b5cf6" stroke-width="3" fill="none"/>
+  
+  <rect x="340" y="170" width="30" height="30" fill="none" stroke="#8b5cf6" stroke-width="3" rx="4"/>
+  
+  <!-- Text -->
+  <text x="300" y="250" font-family="monospace" font-size="32" fill="#a78bfa" text-anchor="middle" font-weight="bold">QUEUEFLOW</text>
+  <text x="300" y="280" font-family="monospace" font-size="14" fill="#666666" text-anchor="middle">[TASK_QUEUE_SYSTEM]</text>
+  
+  <!-- Bottom label -->
+  <text x="300" y="360" font-family="monospace" font-size="12" fill="#333333" text-anchor="middle">// PROJECT_06</text>
+</svg>
