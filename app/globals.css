@@ -2,13 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .glass-panel {
+    @apply bg-glass backdrop-blur-xl border border-glass-border shadow-glass;
+    transform: translateZ(0);
+    position: relative;
+    border-radius: 0.5rem;
+  }
+  
+  .glass-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+  .glass-panel-light {
+    @apply bg-glass-light backdrop-blur-lg border border-glass-border-light shadow-glass-sm;
+    transform: translateZ(0);
+    position: relative;
+    border-radius: 0.5rem;
+  }
+  
+  .glass-panel-light::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.04));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+  .glass-panel-strong {
+    @apply bg-glass-medium backdrop-blur-xl border border-glass-border-strong shadow-glass-lg;
+    transform: translateZ(0);
+    position: relative;
+    border-radius: 0.5rem;
+  }
+  
+  .glass-panel-strong::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.10));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+  
+  /* Fallback for browsers without backdrop-filter support */
+  @supports not (backdrop-filter: blur(8px)) {
+    .glass-panel {
+      background: rgba(13, 13, 13, 0.95);
+    }
+    
+    .glass-panel-light {
+      background: rgba(13, 13, 13, 0.90);
+    }
+    
+    .glass-panel-strong {
+      background: rgba(13, 13, 13, 0.98);
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
   }
   
   body {
-    @apply bg-background text-text-primary;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(255, 107, 53, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 139, 97, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, rgba(255, 87, 34, 0.05) 0%, transparent 50%),
+      radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(135deg, #0a0a0f 0%, #0f0a15 50%, #0a0f15 100%);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 30px 30px, 100% 100%;
+    background-attachment: fixed;
+    @apply text-text-primary;
   }
   
   html {
@@ -17,18 +102,37 @@
   
   /* Focus indicators for keyboard navigation */
   *:focus-visible {
-    outline: 2px solid #a78bfa;
+    outline: 2px solid #ff6b35;
     outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2);
   }
   
   button:focus-visible,
   a:focus-visible {
-    outline: 2px solid #a78bfa;
+    outline: 2px solid #ff6b35;
     outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.2);
   }
 }
 
 @layer utilities {
+  .glass-hover {
+    @apply transition-all duration-medium;
+  }
+  
+  .glass-hover:hover {
+    @apply shadow-glass-glow border-accent-primary/60 scale-[1.02];
+    backdrop-filter: blur(40px);
+  }
+  
+  .glass-glow-on-hover {
+    @apply transition-shadow duration-medium;
+  }
+  
+  .glass-glow-on-hover:hover {
+    @apply shadow-glass-glow-lg;
+  }
+  
   .dot-grid {
     background-image: radial-gradient(circle, #333333 1.5px, transparent 1.5px);
     background-size: 24px 24px;
@@ -39,7 +143,7 @@
   }
   
   .glow-border:hover {
-    box-shadow: 0 0 20px rgba(167, 139, 250, 0.5);
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.6);
   }
   
   .terminal-cursor {
@@ -73,7 +177,7 @@
   .hud-corner {
     width: 16px;
     height: 16px;
-    border: 2px solid #a78bfa;
+    border: 2px solid #ff6b35;
     position: absolute;
   }
   
@@ -131,5 +235,40 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  
+  /* Responsive glass optimizations for mobile */
+  @media (max-width: 768px) {
+    .glass-panel {
+      @apply backdrop-blur-md;
+    }
+    
+    .glass-panel-strong {
+      @apply backdrop-blur-lg;
+    }
+  }
+  
+  /* Touch device hover states */
+  @media (hover: none) {
+    .glass-hover:active {
+      @apply shadow-glass-glow border-accent-primary/60 scale-[1.02];
+      backdrop-filter: blur(24px);
+    }
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    
+    .glass-panel,
+    .glass-panel-light,
+    .glass-panel-strong {
+      backdrop-filter: none;
+      background: rgba(13, 13, 13, 0.95);
+    }
   }
 }

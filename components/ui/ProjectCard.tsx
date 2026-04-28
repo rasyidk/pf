@@ -10,7 +10,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, onClick }: ProjectCardProps) {
   return (
     <article 
-      className="group bg-surface border border-border rounded overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_rgba(167,139,250,0.3)] hover:border-accent-primary flex flex-col h-full cursor-pointer" 
+      className="group glass-panel glass-hover overflow-hidden flex flex-col h-full cursor-pointer" 
       aria-label={`${project.title} project`}
       onClick={onClick}
       role="button"
@@ -68,7 +68,7 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
         </div>
 
         {/* Category Badge */}
-        <div className="pt-2 border-t border-border">
+        <div className="pt-2 border-t border-glass-border">
           <span className="inline-block px-2 py-1 bg-accent-primary/10 border border-accent-primary/30 text-accent-primary font-mono text-[10px] rounded">
             [{project.category.toUpperCase()}]
           </span>

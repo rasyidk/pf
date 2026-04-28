@@ -121,10 +121,11 @@ export default function Projects() {
               onClick={() => handleCategoryChange(category)}
               role="tab"
               aria-selected={selectedCategory === category}
+              style={{ borderRadius: '0.5rem' }}
               className={`px-4 py-2 font-mono text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background ${
                 selectedCategory === category
-                  ? 'bg-accent-primary text-black'
-                  : 'border border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-black'
+                  ? 'bg-accent-primary text-white border border-accent-primary'
+                  : 'glass-panel glass-hover text-accent-primary'
               }`}
             >
               [{category.toUpperCase()}]
@@ -174,10 +175,10 @@ export default function Projects() {
             <button
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
-              className={`flex items-center gap-1 px-4 py-3 border transition-all duration-200 w-full sm:w-auto justify-center focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background ${
+              className={`flex items-center gap-1 px-4 py-3 transition-all duration-200 w-full sm:w-auto justify-center focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background ${
                 currentPage === 1
-                  ? 'border-border text-text-muted cursor-not-allowed'
-                  : 'border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-black'
+                  ? 'glass-panel text-text-muted cursor-not-allowed opacity-50'
+                  : 'glass-panel glass-hover text-accent-primary'
               }`}
               aria-label="Previous page"
             >
@@ -191,10 +192,11 @@ export default function Projects() {
                 <button
                   key={pageNum}
                   onClick={() => handlePageChange(pageNum)}
-                  className={`px-4 py-3 border transition-all duration-200 flex-1 sm:flex-none focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background ${
+                  style={{ borderRadius: '0.5rem' }}
+                  className={`px-4 py-3 transition-all duration-200 flex-1 sm:flex-none focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background ${
                     currentPage === pageNum
-                      ? 'bg-accent-primary text-black border-accent-primary'
-                      : 'border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-black'
+                      ? 'bg-accent-primary text-white border border-accent-primary'
+                      : 'glass-panel glass-hover text-accent-primary'
                   }`}
                   aria-label={`Go to page ${pageNum}`}
                   aria-current={currentPage === pageNum ? 'page' : undefined}
@@ -208,10 +210,10 @@ export default function Projects() {
             <button
               onClick={() => handlePageChange(currentPage + 1)}
               disabled={currentPage === totalPages}
-              className={`flex items-center gap-1 px-4 py-3 border transition-all duration-200 w-full sm:w-auto justify-center focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background ${
+              className={`flex items-center gap-1 px-4 py-3 transition-all duration-200 w-full sm:w-auto justify-center focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background ${
                 currentPage === totalPages
-                  ? 'border-border text-text-muted cursor-not-allowed'
-                  : 'border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-black'
+                  ? 'glass-panel text-text-muted cursor-not-allowed opacity-50'
+                  : 'glass-panel glass-hover text-accent-primary'
               }`}
               aria-label="Next page"
             >

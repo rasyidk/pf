@@ -1,13 +1,55 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ExperienceEntry } from '@/lib/types';
+import { loadExperience } from '@/lib/utils';
 
-interface ExperienceProps {
-  entries: ExperienceEntry[];
-}
+export default function Experience() {
+  const [entries, setEntries] = useState<ExperienceEntry[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-export default function Experience({ entries }: ExperienceProps) {
+  // Load experience on mount
+  useEffect(() => {
+    async function fetchExperience() {
+      setIsLoading(true);
+      const data = await loadExperience();
+      setEntries(data);
+      setIsLoading(false);
+    }
+    fetchExperience();
+  }, []);
+
+  if (isLoading) {
+    return (
+      <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-mono text-xl sm:text-2xl text-text-secondary tracking-[0.2em] mb-12 font-bold">
+            {'// EXPERIENCE'}
+          </h2>
+          <div className="text-center text-text-secondary font-mono">
+            [LOADING...]
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (entries.length === 0) {
+    return (
+      <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-mono text-xl sm:text-2xl text-text-secondary tracking-[0.2em] mb-12 font-bold">
+            {'// EXPERIENCE'}
+          </h2>
+          <div className="text-center text-text-secondary font-mono">
+            [NO EXPERIENCE FOUND]
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8" aria-label="Experience section">
       <div className="max-w-7xl mx-auto">
@@ -60,7 +102,7 @@ export default function Experience({ entries }: ExperienceProps) {
                   </div>
 
                   {/* Responsibilities */}
-                  <div className="bg-surface border border-border p-4 sm:p-6 rounded">
+                  <div className="glass-panel p-4 sm:p-6">
                     <ul
                       className={`space-y-2 text-sm sm:text-base text-text-secondary ${
                         index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'

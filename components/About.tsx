@@ -13,7 +13,7 @@ interface AboutProps {
 
 export default function About({ stats }: AboutProps) {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-border" aria-label="About section">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-glass-border" aria-label="About section">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <h2 className="font-mono text-xl sm:text-2xl font-bold text-text-secondary tracking-[0.2em] mb-12">
@@ -29,7 +29,7 @@ export default function About({ stats }: AboutProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="border border-border p-6 hover:border-accent-primary transition-colors group"
+              className="glass-panel p-6 glass-hover group"
             >
               {/* Value */}
               <div className="font-mono text-4xl sm:text-5xl font-bold text-accent-primary mb-2 group-hover:scale-110 transition-transform">

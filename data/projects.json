@@ -2,102 +2,195 @@
   "projects": [
     {
       "id": "01",
-      "title": "SmartPredict AI",
-      "description": "Machine learning platform for predictive analytics using neural networks. Provides real-time predictions with 95% accuracy for business forecasting and trend analysis.",
-      "image": "/projects/storekit.jpg",
-      "codeSnippet": "model = Sequential([\n  Dense(128, activation='relu'),\n  Dropout(0.3),\n  Dense(64, activation='relu'),\n  Dense(1, activation='sigmoid')\n])",
-      "tags": ["Python", "TensorFlow", "Keras", "Pandas"],
-      "github": "https://github.com/rasyidkusnady/smartpredict-ai",
-      "demo": "https://smartpredict-demo.vercel.app",
-      "category": "AI/ML"
+      "title": "ScholarLens",
+      "description": "An AI-powered platform designed to help users efficiently understand and extract insights from academic documents using a Retrieval-Augmented Generation (RAG) approach. It combines intelligent search with natural language generation to provide accurate answers and summaries from uploaded papers.",
+      "image": "/projects/scholarlens.png",
+      "tags": ["RAG", "Next.JS", "FastAPI", "Vector Database", "NLP"],
+      "github": "",
+      "demo": "https://youtu.be/f4ioYhEyAYU",
+      "category": "AI/ML",
+      "contributions": [
+        "Researched and developed an iterative multi-hop RAG architecture incorporating LLMs and Vector Databases for complex academic document analysis ",
+        "Integrated RAG capabilities into a chatbot interface by building a high-performance backend using FastAPI ",
+        "Implemented data streaming through RESTful APIs to provide real-time chatbot responses for over 16 evaluation respondents ",
+        "Streamlined scholarly content exploration by utilizing transformer-based models to automate key information extraction "
+      ]
     },
     {
       "id": "02",
-      "title": "ImageClassify Pro",
-      "description": "Deep learning image classification system using CNN architecture. Trained on 100K+ images with transfer learning for accurate object detection and recognition.",
-      "image": "/projects/logify.jpg",
-      "codeSnippet": "predictions = model.predict(\n  preprocess_image(img)\n)\nclass_name = decode_predictions(\n  predictions, top=1\n)[0][0][1]",
-      "tags": ["PyTorch", "OpenCV", "FastAPI", "Docker"],
-      "github": "https://github.com/rasyidkusnady/imageclassify-pro",
-      "demo": "https://imageclassify-demo.vercel.app",
-      "category": "AI/ML"
+      "title": "Sugar Counting",
+      "description": "Industrial automation project designed to help companies accurately count sugar sacks on a conveyor belt using computer vision. It enables real-time detection and tracking to minimize manual errors in industrial environments.",
+      "image": "/projects/sugar-counting.png",
+      "tags": ["Python", "YOLOv8", "OpenCV", "CNN", "PyTorch"],
+      "github": "https://github.com/rasyidk/sugar_counting",
+      "demo": "",
+      "category": "AI/ML",
+      "contributions": [
+        "Achieved a 0.94 mAP accuracy score by developing and fine-tuning a YOLOv8-based computer vision model ",
+        "Eliminated manual tracking errors by automating real-time sack counting on conveyor belts using Python and CNN architectures ",
+        "Optimized detection performance for industrial hardware by fine-tuning models with OpenCV and PyTorch ",
+        "Engineered an end-to-end industrial automation pipeline for real-time tracking in warehouse environments "
+      ]
     },
     {
       "id": "03",
-      "title": "NLP Sentiment Analyzer",
-      "description": "Natural language processing tool for sentiment analysis and text classification. Processes customer reviews and social media data with BERT-based models.",
-      "image": "/projects/folio-cms.jpg",
-      "codeSnippet": "from transformers import pipeline\n\nsentiment = pipeline(\n  'sentiment-analysis'\n)\nresult = sentiment(\n  'This product is amazing!'\n)",
-      "tags": ["Python", "Transformers", "BERT", "Scikit-learn"],
-      "github": "https://github.com/rasyidkusnady/nlp-sentiment",
-      "demo": "https://nlp-sentiment-demo.vercel.app",
-      "category": "AI/ML"
+      "title": "Scanocular",
+      "description": "AI-based mobile application for early detection of eye diseases like cataracts, glaucoma, and diabetic retinopathy using just a smartphone camera.",
+      "image": "/projects/scanocular.png",
+      "tags": ["Python", "YOLOv8", "React Native", "Tailwind", "Solidity"],
+      "github": "https://github.com/rasyidk/ScanOcular_backend",
+      "demo": "",
+      "category": "AI/ML",
+      "contributions": [
+        "Built an AI model for eye disease detection by training on secondary datasets with YOLOv8 ",
+        "Designed and implemented RESTful APIs to facilitate seamless integration between the AI model and the mobile frontend ",
+        "Developed a responsive application interface using React Native and Tailwind CSS for optimal user experience ",
+        "Created smart contracts for secure medical data management within the application ecosystem "
+      ]
     },
     {
       "id": "04",
-      "title": "E-Commerce Hub",
-      "description": "Full-stack e-commerce platform with real-time inventory, secure payments via Stripe, and admin dashboard. Built with Next.js for optimal performance and SEO.",
-      "image": "/projects/authkit.jpg",
-      "codeSnippet": "const { data } = await stripe\n  .checkout.sessions.create({\n    payment_method_types: ['card'],\n    line_items: cartItems,\n    mode: 'payment',\n    success_url: '/success'\n  });",
-      "tags": ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-      "github": "https://github.com/rasyidkusnady/ecommerce-hub",
-      "demo": "https://ecommerce-hub-demo.vercel.app",
-      "category": "Website"
+      "title": "Yayasan Harmoni Semesta Lestari",
+      "description": "Web-based information system developed to support administrative management and operational digitalization for an organizational foundation.",
+      "image": "/projects/yayasan.png",
+      "tags": ["Express.js", "MySQL", "Node.js", "RESTful API"],
+      "github": "",
+      "demo": "https://demo-semesta-lestari.vercel.app/",
+      "category": "Website",
+      "contributions": [
+        "Architected a structured backend system using Express.js to ensure efficient data management and system performance ",
+        "Designed and implemented RESTful APIs to support all organizational system functionalities ",
+        "Managed complex database operations for storing and processing organizational data using MySQL ",
+        "Implemented secure authentication and authorization mechanisms for both administrators and regular users "
+      ]
     },
     {
       "id": "05",
-      "title": "Portfolio CMS",
-      "description": "Headless content management system with drag-and-drop builder. API-first architecture for multi-channel content delivery with GraphQL support.",
-      "image": "/projects/devmetrics.jpg",
-      "codeSnippet": "const content = await cms\n  .collection('portfolio')\n  .where('published', true)\n  .populate('author')\n  .sort({ date: -1 })\n  .limit(10);",
-      "tags": ["React", "GraphQL", "MongoDB", "Node.js"],
-      "github": "https://github.com/rasyidkusnady/portfolio-cms",
-      "demo": "https://portfolio-cms-demo.vercel.app",
-      "category": "Website"
+      "title": "Dreambooth",
+      "description": "Self-service photobooth platform consisting of a web-based management dashboard and a high-performance desktop kiosk application.",
+      "image": "/projects/dreambooth.png",
+      "tags": ["Next.js", "MongoDB", "Electron.js", "Tailwind CSS"],
+      "github": "",
+      "demo": "https://dreamboothstudio.vercel.app/",
+      "category": "Website",
+      "contributions": [
+        "Successfully deployed a self-service platform to 10 commercial clients by managing end-to-end technical operations ",
+        "Engineered a high-performance desktop kiosk experience using Electron.JS for seamless hardware integration ",
+        "Integrated Xendit payment gateway to facilitate secure real-time QRIS transactions for daily operations ",
+        "Sliced and integrated UI designs using Next.js and Tailwind CSS while building a robust MongoDB backend "
+      ]
     },
     {
       "id": "06",
-      "title": "Real-Time Chat App",
-      "description": "WebSocket-based real-time messaging platform with end-to-end encryption. Supports group chats, file sharing, and video calls with WebRTC integration.",
-      "image": "/projects/queueflow.jpg",
-      "codeSnippet": "socket.on('message', (data) => {\n  const decrypted = decrypt(\n    data.content,\n    privateKey\n  );\n  displayMessage(decrypted);\n});",
-      "tags": ["Socket.io", "WebRTC", "Express", "Redis"],
-      "github": "https://github.com/rasyidkusnady/realtime-chat",
-      "demo": "https://realtime-chat-demo.vercel.app",
-      "category": "Website"
+      "title": "LMS BP2MI",
+      "description": "Learning Management System specifically tailored for Indonesian migrant workers and civil servants, serving approximately 3,000 users.",
+      "image": "/projects/lms.png",
+      "tags": ["Laravel", "Jenkins", "Docker", "MySQL", "Ubuntu Server"],
+      "github": "",
+      "demo": "https://siappintar.bp2mi.go.id/",
+      "category": "Website",
+      "contributions": [
+        "Developed core automation features for adding LMS participants from Excel files and generating digital certificates ",
+        "Enhanced software reliability by implementing Continuous Integration/Continuous Deployment (CI/CD) pipelines using Jenkins ",
+        "Maintained high system availability by orchestrating containerized application deployments using Docker ",
+        "Optimized backend performance and database queries to handle a load of approximately 3,000 active users "
+      ]
     },
     {
       "id": "07",
-      "title": "FitTrack Mobile",
-      "description": "Cross-platform fitness tracking app with workout plans, calorie counter, and progress analytics. Syncs with wearable devices via Bluetooth.",
-      "image": "/projects/storekit.jpg",
-      "codeSnippet": "const workout = await Workout\n  .create({\n    type: 'cardio',\n    duration: 30,\n    calories: 250,\n    userId: user.id\n  });\nawait syncToCloud(workout);",
-      "tags": ["React Native", "Firebase", "Redux", "Expo"],
-      "github": "https://github.com/rasyidkusnady/fittrack-mobile",
-      "demo": "https://fittrack-demo.vercel.app",
-      "category": "Mobile App"
+      "title": "PPSMB Pionir Gadjah Mada",
+      "description": "Information website for new student orientation at Universitas Gadjah Mada, featuring Augmented Reality for campus tours.",
+      "image": "/projects/ppsmb.png",
+      "tags": ["Next.JS", "Strapi", "AR.JS", "Augmented Reality"],
+      "github": "",
+      "demo": "",
+      "category": "Website",
+      "contributions": [
+        "Developed an information portal that successfully served approximately 70,000 users during student orientation ",
+        "Built the 'LENSAGAMA' core feature using AR.JS technology to introduce the campus environment via Augmented Reality ",
+        "Integrated the Next.js frontend with a Strapi CMS for dynamic and efficient content management ",
+        "Achieved high scalability to handle massive traffic spikes during the peak orientation period "
+      ]
     },
     {
       "id": "08",
-      "title": "FoodDelivery App",
-      "description": "On-demand food delivery mobile application with real-time order tracking, payment integration, and restaurant management system.",
-      "image": "/projects/logify.jpg",
-      "codeSnippet": "const order = await Order\n  .findById(orderId)\n  .populate('restaurant')\n  .populate('driver');\n\nawait trackLocation(\n  driver.id,\n  updateMap\n);",
-      "tags": ["Flutter", "Firebase", "Google Maps", "Stripe"],
-      "github": "https://github.com/rasyidkusnady/fooddelivery-app",
-      "demo": "https://fooddelivery-demo.vercel.app",
-      "category": "Mobile App"
+      "title": "Covchain",
+      "description": "Blockchain-based COVID-19 vaccine tracking application designed to prevent data falsification and ensure supply chain transparency.",
+      "image": "/projects/covchain.png",
+      "tags": ["Java", "VEXANIUM", "Blockchain", "Smart Contracts", "Python"],
+      "github": "https://github.com/rasyidk/covchainApp",
+      "demo": "",
+      "category": "Mobile App",
+      "contributions": [
+        "Mitigated data falsification by developing an innovative blockchain-based Android application for secure vaccine tracking ",
+        "Guaranteed immutable record-keeping by architecting a backend integrated with the VEXANIUM blockchain ecosystem ",
+        "Implemented vaccine tracking features to determine precise location and delivery status of vaccine supplies ",
+        "Developed secure smart contracts to manage vaccine distribution density and prevent supply chain embezzlement "
+      ]
     },
     {
       "id": "09",
-      "title": "TaskManager Pro",
-      "description": "Productivity mobile app for task management with offline support, push notifications, and team collaboration features. Built with native performance.",
-      "image": "/projects/folio-cms.jpg",
-      "codeSnippet": "Task.create({\n  title: 'Complete project',\n  priority: 'high',\n  dueDate: tomorrow,\n  assignedTo: teamMembers\n}).then(task => {\n  sendNotification(task);\n});",
-      "tags": ["Swift", "Kotlin", "SQLite", "Push Notifications"],
-      "github": "https://github.com/rasyidkusnady/taskmanager-pro",
-      "demo": "https://taskmanager-demo.vercel.app",
-      "category": "Mobile App"
+      "title": "Reconchain",
+      "description": "Blockchain-based mobile application designed to track carbon emissions produced by specific products.",
+      "image": "/projects/reconchain.png",
+      "tags": ["Java", "Solidity", "Polygon", "Django", "Blockchain"],
+      "github": "https://github.com/rasyidk/reconchain",
+      "demo": "",
+      "category": "Mobile App",
+      "contributions": [
+        "Developed a blockchain solution to reduce carbon emissions by tracking product environmental impact ",
+        "Created and deployed smart contracts on the Polygon blockchain for transparent carbon credit recording ",
+        "Integrated the Django-based backend with a mobile frontend to provide real-time emission tracking ",
+        "Designed and implemented RESTful APIs to facilitate communication between the AI analysis and the blockchain layer "
+      ]
+    },
+    {
+      "id": "10",
+      "title": "PORSENIGAMA 2023",
+      "description": "A web-based platform for information and athlete registration during the Porsenigama event, designed to handle large-scale student participation and real-time competition tracking.",
+      "image": "/projects/porsenigama.png",
+      "tags": ["Next.JS", "Strapi", "Project Management"],
+      "github": "",
+      "demo": "https://ukm.ugm.ac.id/2023/porsenigama/",
+      "category": "Website",
+      "contributions": [
+        "Managed the end-to-end development life cycle as Project Manager and Full Stack Developer for an event portal serving 6,000+ students.",
+        "Developed a centralized athlete and artist registration system that successfully processed thousands of participants.",
+        "Engineered a real-time leaderboard feature for inter-faculty competitions to enhance engagement and transparency during the event.",
+        "Integrated Next.js frontend with Strapi headless CMS to ensure efficient content updates and registration data handling."
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Herbacare",
+      "description": "A health-tech platform focused on herbal medicine and natural remedies, providing a comprehensive database and consultation features for traditional healthcare solutions.",
+      "image": "/projects/herbacare.png",
+      "tags": ["Express.js", "Node.js", "MySQL", "RESTful API"],
+      "github": "https://github.com/pudyasta/herbacare",
+      "demo": "",
+      "category": "Website",
+      "contributions": [
+        "Architected a scalable backend infrastructure using Express.js to manage a comprehensive database of herbal remedies and user health records.",
+        "Engineered secure RESTful APIs that facilitated seamless communication between the web frontend and the centralized health information system.",
+        "Optimized data retrieval performance for 100+ herbal medicine categories by implementing efficient indexing and query structures in MySQL.",
+        "Accomplished high system reliability by conducting rigorous API testing and implementing structured error handling across the backend services."
+      ]
+    },
+    {
+      "id": "12",
+      "title": "GoPay: Stop Online Gambling Microsite",
+      "description": "A high-traffic educational microsite developed for GoPay to raise awareness about the dangers of online gambling, featuring interactive content and optimized for a seamless user experience.",
+      "image": "/projects/gopay.png",
+      "tags": ["Vue.JS", "Nuxt.JS", "Frontend Development"],
+      "github": "",
+      "demo": "https://judipastirugi.com/",
+      "category": "Website",
+      "contributions": [
+        "Optimized web performance for a public awareness microsite by implementing code splitting and lazy loading using Nuxt.JS and Vue.JS.",
+        "Engineered a responsive and accessible user interface to ensure effective message delivery to thousands of GoPay users across various devices.",
+        "Collaborated with the creative team to translate campaign requirements into high-fidelity web components with smooth transitions and animations.",
+        "Achieved 40% faster page load times by optimizing asset delivery and leveraging server-side rendering (SSR) capabilities."
+      ]
     }
   ]
 }

@@ -40,7 +40,7 @@ export default function Hero({ name, roles, bio, profileImage }: HeroProps) {
           <div className="space-y-6">
             {/* Label */}
             <div className="font-mono text-sm text-text-secondary tracking-wider">
-              {'// SOFTWARE ENGINEER'}
+              {'// RASYID KUSNADY'}
             </div>
 
             {/* Name */}
@@ -72,14 +72,14 @@ export default function Hero({ name, roles, bio, profileImage }: HeroProps) {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button
                 onClick={() => smoothScrollTo('projects')}
-                className="px-6 py-3 bg-accent-primary text-background font-mono text-sm font-bold hover:bg-accent-secondary transition-colors focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
+                className="px-6 py-3 bg-accent-primary hover:bg-accent-hover text-white font-mono text-sm font-bold transition-colors duration-medium focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
                 aria-label="View projects section"
               >
                 [VIEW_PROJECTS]
               </button>
               <button
                 onClick={() => smoothScrollTo('contact')}
-                className="px-6 py-3 border border-accent-primary text-accent-primary font-mono text-sm font-bold hover:bg-accent-primary hover:text-background transition-colors focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
+                className="px-6 py-3 border border-accent-primary text-accent-primary font-mono text-sm font-bold hover:bg-accent-primary hover:text-white transition-colors duration-medium focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
                 aria-label="Go to contact section"
               >
                 [CONTACT_ME]

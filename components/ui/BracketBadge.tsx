@@ -9,7 +9,7 @@ export default function BracketBadge({ text, icon, hoverable = false }: BracketB
     <span
       className={`inline-flex items-center gap-1.5 font-mono text-sm ${
         hoverable
-          ? 'transition-colors duration-200 hover:bg-accent-primary hover:text-black px-3 py-2 cursor-pointer'
+          ? 'transition-colors duration-200 hover:bg-accent-primary hover:text-white px-3 py-2 cursor-pointer'
           : ''
       }`}
     >

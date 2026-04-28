@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'backdrop-blur-md bg-background/80' : 'bg-transparent'
+        isScrolled ? 'glass-panel-light border-b border-glass-border' : 'bg-transparent'
       }`}
       role="navigation"
       aria-label="Main navigation"
@@ -57,7 +57,7 @@ export default function Navbar() {
               <div key={link.id} className="flex items-center">
                 <button
                   onClick={() => scrollToSection(link.id)}
-                  className="text-text-secondary hover:text-accent-primary transition-colors px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
+                  className="text-text-secondary hover:text-accent-primary transition-colors duration-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
                   aria-label={`Navigate to ${link.label.toLowerCase()} section`}
                 >
                   {link.label}
@@ -96,7 +96,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         id="mobile-menu"
-        className={`md:hidden bg-surface border-t border-border overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`md:hidden glass-panel border-t border-glass-border overflow-hidden transition-all duration-300 ease-in-out ${
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
         aria-hidden={!isMenuOpen}
@@ -106,13 +106,13 @@ export default function Navbar() {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className="block w-full text-left font-mono text-sm text-text-secondary hover:text-accent-primary transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-surface"
+              className="block w-full text-left font-mono text-sm text-text-secondary hover:text-accent-primary transition-colors duration-200 py-2 focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-surface"
               aria-label={`Navigate to ${link.label.toLowerCase()} section`}
             >
               {link.label}
             </button>
           ))}
-          <div className="flex items-center gap-2 font-mono text-sm text-text-secondary pt-2 border-t border-border" role="status" aria-label="Availability status">
+          <div className="flex items-center gap-2 font-mono text-sm text-text-secondary pt-2 border-t border-glass-border" role="status" aria-label="Availability status">
             <div className="relative" aria-hidden="true">
               <div className="w-2 h-2 bg-accent-primary rounded-full animate-pulse" />
               <div className="absolute inset-0 w-2 h-2 bg-accent-primary rounded-full animate-ping" />

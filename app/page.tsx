@@ -11,10 +11,10 @@ import Footer from '@/components/Footer';
 export default function Home() {
   // Hero data
   const heroData = {
-    name: 'Rasyid Kusnady',
-    roles: ['Full Stack Developer', 'AI/ML Engineer', 'Mobile Developer'],
-    bio: 'Passionate software engineer specializing in AI/ML, web development, and mobile applications. I create innovative solutions that leverage cutting-edge technologies.',
-    profileImage: '/profile.jpg',
+    name: 'Crafting Intelligent Systems',
+    roles: ['AI/ML Engineer','Full Stack Developer'],
+    bio: 'Passionate software engineer specializing in AI/ML and Software Development. I create innovative solutions that leverage cutting-edge technologies.',
+    profileImage: '/profile.png',
   };
 
   // About stats data
@@ -48,16 +48,6 @@ export default function Home() {
       ],
     },
     {
-      title: 'MOBILE DEV',
-      skills: [
-        { name: 'React Native', icon: 'devicon-react-original' },
-        { name: 'Flutter', icon: 'devicon-flutter-plain' },
-        { name: 'Swift', icon: 'devicon-swift-plain' },
-        { name: 'Kotlin', icon: 'devicon-kotlin-plain' },
-        { name: 'Firebase', icon: 'devicon-firebase-plain' },
-      ],
-    },
-    {
       title: 'TOOLS',
       skills: [
         { name: 'Git', icon: 'devicon-git-plain' },
@@ -65,32 +55,6 @@ export default function Home() {
         { name: 'VS Code', icon: 'devicon-vscode-plain' },
         { name: 'PostgreSQL', icon: 'devicon-postgresql-plain' },
         { name: 'MongoDB', icon: 'devicon-mongodb-plain' },
-      ],
-    },
-  ];
-
-  // Experience data
-  const experienceData = [
-    {
-      company: 'Tech Innovations Inc',
-      role: 'AI/ML Engineer',
-      period: '2022 — PRESENT',
-      responsibilities: [
-        'Developed machine learning models for predictive analytics and recommendation systems',
-        'Implemented deep learning solutions using TensorFlow and PyTorch',
-        'Optimized model performance achieving 95% accuracy on production datasets',
-        'Led cross-functional team in deploying ML pipelines to cloud infrastructure',
-      ],
-    },
-    {
-      company: 'Digital Solutions Co',
-      role: 'Full Stack Developer',
-      period: '2021',
-      responsibilities: [
-        'Built responsive web and mobile applications using React Native and Next.js',
-        'Designed and implemented RESTful APIs with Node.js and Express',
-        'Collaborated with UI/UX team to create intuitive user interfaces',
-        'Maintained 90% code coverage through comprehensive testing',
       ],
     },
   ];
@@ -116,9 +80,9 @@ export default function Home() {
         profileImage={heroData.profileImage}
       />
       <About stats={aboutStats} />
-      <Skills categories={skillsData} />
       <Projects />
-      <Experience entries={experienceData} />
+      <Experience />
+      <Skills categories={skillsData} />
       <Contact email={contactData.email} social={contactData.social} />
       <Footer />
     </main>

@@ -1,0 +1,62 @@
+{
+  "experience": [
+    {
+      "company": "Taiwan Experience Education Program - National Chung Hsing University",
+      "role": "AI Engineer",
+      "period": "August 2025 - January 2026",
+      "responsibilities": [
+        "Accomplished automated journal identification by reducing literature review time for researchers through the engineering of a Retrieval-Augmented Generation (RAG) platform [cite: 12, 13]",
+        "Architected a high-precision NLP pipeline that extracted keywords from large-scale databases using KeyBERT and BERTopic to improve thematic categorization accuracy [cite: 14]",
+        "Improved context-relevance of extractive answers from the QASPER dataset by implementing advanced retrieval logic using LangChain and LlamaIndex [cite: 15]"
+      ]
+    },
+    {
+      "company": "PT Suitmedia Kreasi Indonesia",
+      "role": "Frontend Developer Intern",
+      "period": "July - December 2024",
+      "responsibilities": [
+        "Optimized web application performance, achieving a 40% reduction in page load times for major projects by implementing code splitting, lazy loading, and asset optimization [cite: 17, 20, 21]",
+        "Engineered high-fidelity and responsive user interfaces that ensured a seamless user experience across diverse devices by leveraging Nuxt.js and Vue.js frameworks [cite: 22]",
+        "Accomplished robust software reliability by maintaining 95%+ cross-browser compatibility through the application of progressive enhancement strategies and polyfills [cite: 23]"
+      ]
+    },
+    {
+      "company": "PT Nusa Quanta Indonesia",
+      "role": "Fullstack Developer (Freelance)",
+      "period": "January 2024 - May 2025",
+      "responsibilities": [
+        "Optimized backend system performance, achieving a 30% increase in API response speeds through strategic database indexing and query optimization using MySQL [cite: 25, 26, 28, 29]",
+        "Streamlined software delivery cycles by implementing automated CI/CD pipelines on Ubuntu Servers via GitHub Actions and Jenkins [cite: 30]",
+        "Accomplished high system availability and scalability for AI-driven services by orchestrating containerized application deployments using Docker [cite: 31]"
+      ]
+    },
+    {
+      "company": "PT Rumah Korea Indonesia",
+      "role": "Fullstack Developer & DevOps",
+      "period": "November 2023 - March 2024",
+      "responsibilities": [
+        "Engineered a comprehensive Learning Management System (LMS) for BP2MI to facilitate educational resource delivery for Indonesian migrant workers [cite: 33, 34, 35, 36]",
+        "Enhanced software reliability and operational efficiency by standardizing deployment workflows through the implementation of Jenkins and Docker [cite: 37]"
+      ]
+    },
+    {
+      "company": "CV BIT Technology",
+      "role": "Fullstack Developer",
+      "period": "January - November 2021",
+      "responsibilities": [
+        "Accomplished secure vaccine tracking by mitigating data falsification through the development of 'COVCHAIN,' an innovative Android-based application [cite: 39, 40, 43, 44]",
+        "Guaranteed immutable and transparent record-keeping for vaccine data by architecting and integrating the COVCHAIN backend with the VEXANIUM blockchain ecosystem [cite: 45]"
+      ]
+    },
+    {
+      "company": "PT Kedata Indonesia Digital",
+      "role": "Data Scientist Intern",
+      "period": "August - December 2020",
+      "responsibilities": [
+        "Supported the Kotabaru City regional election strategy by delivering evidence-based insights through comprehensive data analysis leveraging Python and R [cite: 47, 48, 49, 50]",
+        "Generated actionable business insights for client strategy by identifying competitor market trends through large-scale data scraping from social media platforms and Google Maps reviews [cite: 51]",
+        "Created a detailed social media plan that aligns with the campaign's goals using insights gathered from analyzed data [cite: 52]"
+      ]
+    }
+  ]
+}

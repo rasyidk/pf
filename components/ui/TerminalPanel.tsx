@@ -38,20 +38,20 @@ export default function TerminalPanel({ lines, speed = 30 }: TerminalPanelProps)
   };
 
   return (
-    <div className="bg-[#0a0a0a] border border-[#1a1a1a] p-4 rounded font-mono text-sm text-[#a78bfa]">
+    <div className="glass-panel-strong p-4 rounded font-mono text-sm text-accent-primary">
       {lines.map((line, index) => {
         if (index < currentLineIndex) {
           // Already completed lines
           return (
             <div key={index} className="mb-1">
-              <span className="text-purple-400">{line.prefix}</span> {line.text}
+              <span className="text-accent-secondary">{line.prefix}</span> {line.text}
             </div>
           );
         } else if (index === currentLineIndex && isLineReady) {
           // Current line being animated
           return (
             <div key={index} className="mb-1">
-              <span className="text-purple-400">{line.prefix}</span>{' '}
+              <span className="text-accent-secondary">{line.prefix}</span>{' '}
               <TypewriterText 
                 text={line.text} 
                 speed={speed}

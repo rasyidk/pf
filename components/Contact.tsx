@@ -85,7 +85,7 @@ export default function Contact({ email, social }: ContactProps) {
                 href={social.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 border border-border hover:border-accent-primary hover:bg-accent-primary hover:text-background transition-colors font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
+                className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 glass-panel glass-hover hover:bg-accent-primary hover:text-white transition-colors font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
                 aria-label="Visit GitHub profile"
               >
                 <Github size={20} aria-hidden="true" />
@@ -96,7 +96,7 @@ export default function Contact({ email, social }: ContactProps) {
                 href={social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 border border-border hover:border-accent-primary hover:bg-accent-primary hover:text-background transition-colors font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
+                className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 glass-panel glass-hover hover:bg-accent-primary hover:text-white transition-colors font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
                 aria-label="Visit LinkedIn profile"
               >
                 <Linkedin size={20} aria-hidden="true" />
@@ -107,7 +107,7 @@ export default function Contact({ email, social }: ContactProps) {
                 href={social.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 border border-border hover:border-accent-primary hover:bg-accent-primary hover:text-background transition-colors font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
+                className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 glass-panel glass-hover hover:bg-accent-primary hover:text-white transition-colors font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
                 aria-label="Visit Twitter profile"
               >
                 <Twitter size={20} aria-hidden="true" />

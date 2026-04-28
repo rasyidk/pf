@@ -1,7 +1,6 @@
 // Utility functions for portfolio website
 
-import { Project } from './types';
-import { projectsData } from './projectsData';
+import { Project, ExperienceEntry } from './types';
 
 /**
  * Combines class names, filtering out falsy values
@@ -13,15 +12,31 @@ export function cn(...classes: (string | undefined | null | false)[]): string {
 }
 
 /**
- * Loads project data from imported data
+ * Loads project data from projects.json file
  * @returns Promise resolving to array of projects
  */
 export async function loadProjects(): Promise<Project[]> {
   try {
-    // Return projects from imported data
-    return projectsData;
+    // Dynamic import of JSON file
+    const projectsModule = await import('@/data/projects.json');
+    return projectsModule.projects || [];
   } catch (error) {
     console.error('Error loading projects:', error);
+    return []; // Return empty array as fallback
+  }
+}
+
+/**
+ * Loads experience data from experience.json file
+ * @returns Promise resolving to array of experience entries
+ */
+export async function loadExperience(): Promise<ExperienceEntry[]> {
+  try {
+    // Dynamic import of JSON file
+    const experienceModule = await import('@/data/experience.json');
+    return experienceModule.experience || [];
+  } catch (error) {
+    console.error('Error loading experience:', error);
     return []; // Return empty array as fallback
   }
 }

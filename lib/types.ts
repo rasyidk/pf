@@ -5,11 +5,11 @@ export interface Project {
   title: string;           // e.g., "StoreKit"
   description: string;     // Brief project description
   image: string;           // Path relative to /public, e.g., "/projects/storekit.jpg"
-  codeSnippet: string;     // Code example to display
   tags: string[];          // Technology tags, e.g., ["React", "TypeScript"]
   github: string;          // GitHub repository URL
   demo: string;            // Live demo URL
   category: string;        // Project category: "AI/ML", "Website", "Mobile App"
+  contributions?: string[]; // Optional: Key contributions/achievements
 }
 
 export interface ProjectsData {
