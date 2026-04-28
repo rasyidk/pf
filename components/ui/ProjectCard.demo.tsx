@@ -9,22 +9,32 @@ const demoProjects: Project[] = [
     title: 'StoreKit',
     description: 'E-commerce platform with real-time inventory management, secure payment processing, and admin dashboard. Built with modern web technologies for optimal performance.',
     image: '/projects/storekit.jpg',
-    codeSnippet: 'const cart = useCart();\ncart.addItem(product, {\n  quantity: 1,\n  variant: selectedVariant\n});',
     tags: ['Next.js', 'Stripe', 'PostgreSQL', 'Redis'],
     github: 'https://github.com/rafiardiann/storekit',
     demo: 'https://storekit-demo.vercel.app',
     category: 'Website',
+    contributions: [
+      'Built full-stack e-commerce platform with Next.js',
+      'Integrated Stripe payment gateway',
+      'Implemented real-time inventory management',
+      'Optimized performance with Redis caching'
+    ]
   },
   {
     id: '02',
     title: 'Logify',
     description: 'Centralized logging and monitoring platform for distributed systems. Real-time log aggregation with powerful search and alerting capabilities.',
     image: '/projects/logify.jpg',
-    codeSnippet: "logger.info('User action', {\n  userId: user.id,\n  action: 'purchase',\n  metadata: { amount: 99.99 }\n});",
     tags: ['Node.js', 'Elasticsearch', 'Docker', 'WebSocket'],
     github: 'https://github.com/rafiardiann/logify',
     demo: 'https://logify-demo.vercel.app',
     category: 'Website',
+    contributions: [
+      'Developed centralized logging platform',
+      'Implemented real-time log aggregation with WebSocket',
+      'Built powerful search with Elasticsearch',
+      'Containerized application with Docker'
+    ]
   },
 ];
 
