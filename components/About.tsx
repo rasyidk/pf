@@ -8,10 +8,11 @@ interface StatItem {
 }
 
 interface AboutProps {
+  bio: string;
   stats: StatItem[];
 }
 
-export default function About({ stats }: AboutProps) {
+export default function About({ bio, stats }: AboutProps) {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-glass-border" aria-label="About section">
       <div className="max-w-7xl mx-auto">
@@ -19,6 +20,13 @@ export default function About({ stats }: AboutProps) {
         <h2 className="font-mono text-xl sm:text-2xl font-bold text-text-secondary tracking-[0.2em] mb-12">
           {'// ABOUT'}
         </h2>
+
+        {/* Bio Text */}
+        <div className="mb-12">
+          <p className="text-base sm:text-lg text-text-primary leading-relaxed max-w-3xl">
+            {bio}
+          </p>
+        </div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

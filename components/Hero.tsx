@@ -9,11 +9,10 @@ import { TerminalLine } from '@/lib/types';
 interface HeroProps {
   name: string;
   roles: string[];
-  bio: string;
   profileImage: string;
 }
 
-export default function Hero({ name, roles, bio, profileImage }: HeroProps) {
+export default function Hero({ name, roles, profileImage }: HeroProps) {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [imageError, setImageError] = useState(false);
 
@@ -62,11 +61,6 @@ export default function Hero({ name, roles, bio, profileImage }: HeroProps) {
                 </div>
               ))}
             </div>
-
-            {/* Bio */}
-            <p className="text-base sm:text-lg text-text-primary leading-relaxed max-w-xl">
-              {bio}
-            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

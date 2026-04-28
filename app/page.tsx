@@ -13,17 +13,19 @@ export default function Home() {
   const heroData = {
     name: 'Crafting Intelligent Systems',
     roles: ['AI/ML Engineer','Full Stack Developer'],
-    bio: 'Passionate software engineer specializing in AI/ML and Software Development. I create innovative solutions that leverage cutting-edge technologies.',
     profileImage: '/profile.png',
   };
 
-  // About stats data
-  const aboutStats = [
-    { value: '3.90', label: 'GPA' },
-    { value: '4+', label: 'YEARS EXPERIENCE' },
-    { value: '15+', label: 'PROJECTS' },
-    { value: '100%', label: 'CLIENT SATISFACTION' },
-  ];
+  // About data
+  const aboutData = {
+    bio: 'Passionate software engineer specializing in AI/ML and Software Development. I create innovative solutions that leverage cutting-edge technologies.',
+    stats: [
+      { value: '3.90', label: 'GPA' },
+      { value: '4+', label: 'YEARS EXPERIENCE' },
+      { value: '10+', label: 'PROJECTS' },
+      { value: '100%', label: 'CLIENT SATISFACTION' },
+    ],
+  };
 
   // Skills data
   const skillsData = [
@@ -76,10 +78,9 @@ export default function Home() {
       <Hero
         name={heroData.name}
         roles={heroData.roles}
-        bio={heroData.bio}
         profileImage={heroData.profileImage}
       />
-      <About stats={aboutStats} />
+      <About bio={aboutData.bio} stats={aboutData.stats} />
       <Projects />
       <Experience />
       <Skills categories={skillsData} />
