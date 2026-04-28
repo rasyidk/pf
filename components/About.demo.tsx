@@ -1,6 +1,8 @@
 import About from './About';
 
 export default function AboutDemo() {
+  const demoBio = 'Passionate software engineer specializing in AI/ML and Software Development. I create innovative solutions that leverage cutting-edge technologies.';
+  
   const demoStats = [
     { value: '3.90', label: 'GPA' },
     { value: '4+', label: 'YEARS EXPERIENCE' },
@@ -23,6 +25,7 @@ export default function AboutDemo() {
             <h2 className="text-xl font-bold text-text-primary mb-4">Features:</h2>
             <ul className="list-disc list-inside text-text-secondary space-y-2">
               <li>Section header with &quot;// ABOUT&quot; label</li>
+              <li>Bio text paragraph with clean typography</li>
               <li>Responsive grid: 1 column (mobile), 2 columns (tablet), 4 columns (desktop)</li>
               <li>Animated stat cards with staggered entrance</li>
               <li>Hover effects: border color change and value scale</li>
@@ -35,7 +38,7 @@ export default function AboutDemo() {
 
         {/* Demo Component */}
         <div className="border-t border-border pt-12">
-          <About stats={demoStats} />
+          <About bio={demoBio} stats={demoStats} />
         </div>
 
         {/* Variations */}
@@ -45,6 +48,7 @@ export default function AboutDemo() {
               Variation: Different Stats
             </h2>
             <About
+              bio="Experienced developer with a passion for creating elegant solutions to complex problems."
               stats={[
                 { value: '3.73', label: 'GPA' },
                 { value: '5+', label: 'YEARS EXPERIENCE' },
@@ -59,6 +63,7 @@ export default function AboutDemo() {
               Variation: Fewer Stats (3 items)
             </h2>
             <About
+              bio="Full-stack developer specializing in modern web technologies and cloud infrastructure."
               stats={[
                 { value: '4.0', label: 'GPA' },
                 { value: '3+', label: 'YEARS EXPERIENCE' },
@@ -72,6 +77,7 @@ export default function AboutDemo() {
               Variation: More Stats (5 items)
             </h2>
             <About
+              bio="Software engineer with expertise in AI/ML, web development, and DevOps practices."
               stats={[
                 { value: '3.85', label: 'GPA' },
                 { value: '6+', label: 'YEARS EXPERIENCE' },
@@ -93,14 +99,17 @@ export default function AboutDemo() {
 {`import About from '@/components/About';
 
 export default function Page() {
-  const aboutStats = [
-    { value: '3.90', label: 'GPA' },
-    { value: '4+', label: 'YEARS EXPERIENCE' },
-    { value: '15+', label: 'PROJECTS' },
-    { value: '100%', label: 'CLIENT SATISFACTION' },
-  ];
+  const aboutData = {
+    bio: 'Passionate software engineer specializing in AI/ML and Software Development.',
+    stats: [
+      { value: '3.90', label: 'GPA' },
+      { value: '4+', label: 'YEARS EXPERIENCE' },
+      { value: '15+', label: 'PROJECTS' },
+      { value: '100%', label: 'CLIENT SATISFACTION' },
+    ],
+  };
 
-  return <About stats={aboutStats} />;
+  return <About bio={aboutData.bio} stats={aboutData.stats} />;
 }`}
             </code>
           </pre>
