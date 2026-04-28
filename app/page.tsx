@@ -61,11 +61,11 @@ export default function Home() {
 
   // Contact data
   const contactData = {
-    email: 'rasyid.kusnady@example.com',
+    email: 'rasyidkusnady@gmail.com',
     social: {
-      github: 'https://github.com/rasyidkusnady',
-      linkedin: 'https://linkedin.com/in/rasyidkusnady',
-      twitter: 'https://twitter.com/rasyidkusnady',
+      github: 'https://github.com/rasyidk',
+      linkedin: 'https://www.linkedin.com/in/rasyidkusnady/',
+      twitter: '',
     },
   };
 

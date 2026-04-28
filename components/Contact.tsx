@@ -81,38 +81,44 @@ export default function Contact({ email, social }: ContactProps) {
               CONNECT
             </h3>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <a
-                href={social.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 glass-panel glass-hover hover:bg-accent-primary hover:text-white transition-colors font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
-                aria-label="Visit GitHub profile"
-              >
-                <Github size={20} aria-hidden="true" />
-                <span>GITHUB</span>
-              </a>
+              {social.github && (
+                <a
+                  href={social.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 glass-panel glass-hover hover:bg-accent-primary hover:text-white transition-colors font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
+                  aria-label="Visit GitHub profile"
+                >
+                  <Github size={20} aria-hidden="true" />
+                  <span>GITHUB</span>
+                </a>
+              )}
               
-              <a
-                href={social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 glass-panel glass-hover hover:bg-accent-primary hover:text-white transition-colors font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
-                aria-label="Visit LinkedIn profile"
-              >
-                <Linkedin size={20} aria-hidden="true" />
-                <span>LINKEDIN</span>
-              </a>
+              {social.linkedin && (
+                <a
+                  href={social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 glass-panel glass-hover hover:bg-accent-primary hover:text-white transition-colors font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
+                  aria-label="Visit LinkedIn profile"
+                >
+                  <Linkedin size={20} aria-hidden="true" />
+                  <span>LINKEDIN</span>
+                </a>
+              )}
               
-              <a
-                href={social.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 glass-panel glass-hover hover:bg-accent-primary hover:text-white transition-colors font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
-                aria-label="Visit Twitter profile"
-              >
-                <Twitter size={20} aria-hidden="true" />
-                <span>TWITTER</span>
-              </a>
+              {social.twitter && (
+                <a
+                  href={social.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center sm:justify-start gap-2 px-4 py-3 glass-panel glass-hover hover:bg-accent-primary hover:text-white transition-colors font-mono text-sm focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 focus:ring-offset-background"
+                  aria-label="Visit Twitter profile"
+                >
+                  <Twitter size={20} aria-hidden="true" />
+                  <span>TWITTER</span>
+                </a>
+              )}
             </div>
           </div>
         </div>
