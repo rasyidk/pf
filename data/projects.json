@@ -34,6 +34,22 @@
     },
     {
       "id": "03",
+      "title": "Smart Surveillance System",
+      "description": "Smart surveillance system with real-time object detection and tracking capabilities, designed and deployed for enhanced security monitoring at GYS facilities.",
+      "image": "/projects/surveillance.png",
+      "tags": ["Python", "Computer Vision", "YOLO", "Real-time", "Surveillance"],
+      "github": "",
+      "demo": "",
+      "category": "Computer Vision",
+      "contributions": [
+        "Implemented high-performance computer vision models for real-time object detection, tracking, and automated alerting",
+        "Integrated the system with existing CCTV infrastructure to allow for seamless deployment without requiring hardware replacement",
+        "Optimized detection algorithms for continuous 24/7 monitoring while maintaining minimal latency for critical security responses",
+        "Designed and deployed a scalable architecture capable of handling multiple video streams simultaneously for GYS facilities"
+      ]
+    },
+    {
+      "id": "04",
       "title": "Scanocular",
       "description": "AI-based mobile application for early detection of eye diseases like cataracts, glaucoma, and diabetic retinopathy using just a smartphone camera.",
       "image": "/projects/scanocular.png",
@@ -49,7 +65,7 @@
       ]
     },
     {
-      "id": "04",
+      "id": "05",
       "title": "Yayasan Harmoni Semesta Lestari",
       "description": "Web-based information system developed to support administrative management and operational digitalization for an organizational foundation.",
       "image": "/projects/yayasan.png",
@@ -65,7 +81,7 @@
       ]
     },
     {
-      "id": "05",
+      "id": "06",
       "title": "Dreambooth",
       "description": "Self-service photobooth platform consisting of a web-based management dashboard and a high-performance desktop kiosk application.",
       "image": "/projects/dreambooth.png",
@@ -81,7 +97,7 @@
       ]
     },
     {
-      "id": "06",
+      "id": "07",
       "title": "LMS BP2MI",
       "description": "Learning Management System specifically tailored for Indonesian migrant workers and civil servants, serving approximately 3,000 users.",
       "image": "/projects/lms.png",
@@ -97,7 +113,7 @@
       ]
     },
     {
-      "id": "07",
+      "id": "08",
       "title": "PPSMB Pionir Gadjah Mada",
       "description": "Information website for new student orientation at Universitas Gadjah Mada, featuring Augmented Reality for campus tours.",
       "image": "/projects/ppsmb.png",
@@ -113,7 +129,7 @@
       ]
     },
     {
-      "id": "08",
+      "id": "09",
       "title": "Covchain",
       "description": "Blockchain-based COVID-19 vaccine tracking application designed to prevent data falsification and ensure supply chain transparency.",
       "image": "/projects/covchain.png",
@@ -129,7 +145,7 @@
       ]
     },
     {
-      "id": "09",
+      "id": "10",
       "title": "Reconchain",
       "description": "Blockchain-based mobile application designed to track carbon emissions produced by specific products.",
       "image": "/projects/reconchain.png",
@@ -145,7 +161,7 @@
       ]
     },
     {
-      "id": "10",
+      "id": "11",
       "title": "PORSENIGAMA 2023",
       "description": "A web-based platform for information and athlete registration during the Porsenigama event, designed to handle large-scale student participation and real-time competition tracking.",
       "image": "/projects/porsenigama.png",
@@ -161,7 +177,7 @@
       ]
     },
     {
-      "id": "11",
+      "id": "12",
       "title": "Herbacare",
       "description": "A health-tech platform focused on herbal medicine and natural remedies, providing a comprehensive database and consultation features for traditional healthcare solutions.",
       "image": "/projects/herbacare.png",
@@ -177,7 +193,7 @@
       ]
     },
     {
-      "id": "12",
+      "id": "13",
       "title": "GoPay: Stop Online Gambling Microsite",
       "description": "A high-traffic educational microsite developed for GoPay to raise awareness about the dangers of online gambling, featuring interactive content and optimized for a seamless user experience.",
       "image": "/projects/gopay.png",
