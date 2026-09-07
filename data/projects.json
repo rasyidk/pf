@@ -2,10 +2,75 @@
   "projects": [
     {
       "id": "01",
+      "title": "Cilupbah Warehouse Management System",
+      "description": "Warehouse Management System designed for PT Ultra Teknologi Indonesia to maintain accurate and consistent inventory data across multiple marketplaces.",
+      "image": "/projects/wms.png",
+      "tags": [
+        "Laravel",
+        "Redis",
+        "Docker",
+        "Kubernetes",
+        "PostgreSQL"
+      ],
+      "github": "",
+      "demo": "https://app.ultra-fit.id",
+      "category": "Website",
+      "contributions": [
+        "Designed a stock-synchronization service in Laravel using the service repository pattern and Redis distributed locks combined with database row-level locking to maintain accurate and consistent inventory data across concurrent orders from 4 marketplaces (Shopee, Tokopedia, Lazada, TikTok Shop), processing 1,000+ daily orders.",
+        "Implemented error monitoring with Sentry, Grafana, and Prometheus, enabling faster incident triage and troubleshooting of marketplace webhook and server failures.",
+        "Decoupled webhook ingestion from stock-sync via Laravel Queues (Redis), cutting response time from ~450ms to ~30ms.",
+        "Wrote 40+ unit and integration tests covering API endpoints and Redis locking logic using PHPUnit, achieving 75% code coverage on core stock-sync service.",
+        "Automated CI/CD pipelines with GitHub Actions on Linux runners to build, test, and push Docker images to a container registry, streamlining the release workflow for Kubernetes deployments."
+      ]
+    },
+    {
+      "id": "02",
+      "title": "Outbreak Investigation",
+      "description": "System for outbreak investigation developed for PKT UGM, encompassing both backend improvements and mobile application development.",
+      "image": "/projects/outbreak.png",
+      "tags": [
+        "Nest.js",
+        "PostgreSQL",
+        "AWS",
+        "Flutter"
+      ],
+      "github": "",
+      "demo": "https://investigasiklb.org",
+      "category": "Mobile App",
+      "contributions": [
+        "Handled backend improvements while also developing mobile applications, including rewriting core business logic and architecting REST APIs with NestJS and TypeORM, optimizing PostgreSQL queries to reduce complex query response times to under 150ms.",
+        "Secured 120+ endpoints with JWT authentication and custom RBAC guards across 5 distinct roles.",
+        "Implemented subscription logic for 2 subscription types (Organization and Individual), managing access control and subscription lifecycle states."
+      ]
+    },
+    {
+      "id": "03",
+      "title": "Yayasan Harmoni Semesta Lestari CMS",
+      "description": "Content Management System supporting various content types for a nonprofit organization.",
+      "image": "/projects/yayasan.png",
+      "tags": [
+        "Express.js",
+        "MySQL"
+      ],
+      "github": "",
+      "demo": "https://yayasansemestalestari.com/",
+      "category": "Website",
+      "contributions": [
+        "Built modular REST API endpoints in Express.js supporting 10+ CMS content types for a nonprofit's content management."
+      ]
+    },
+    {
+      "id": "04",
       "title": "ScholarLens",
       "description": "An AI-powered platform designed to help users efficiently understand and extract insights from academic documents using a Retrieval-Augmented Generation (RAG) approach. It combines intelligent search with natural language generation to provide accurate answers and summaries from uploaded papers.",
       "image": "/projects/scholarlens.png",
-      "tags": ["RAG", "Next.JS", "FastAPI", "Vector Database", "NLP"],
+      "tags": [
+        "RAG",
+        "Next.JS",
+        "FastAPI",
+        "Vector Database",
+        "NLP"
+      ],
       "github": "",
       "demo": "https://youtu.be/f4ioYhEyAYU",
       "category": "AI/ML",
@@ -17,11 +82,17 @@
       ]
     },
     {
-      "id": "02",
+      "id": "05",
       "title": "Sugar Counting",
       "description": "Industrial automation project designed to help companies accurately count sugar sacks on a conveyor belt using computer vision. It enables real-time detection and tracking to minimize manual errors in industrial environments.",
       "image": "/projects/sugar-counting.png",
-      "tags": ["Python", "YOLOv8", "OpenCV", "CNN", "PyTorch"],
+      "tags": [
+        "Python",
+        "YOLOv8",
+        "OpenCV",
+        "CNN",
+        "PyTorch"
+      ],
       "github": "https://github.com/rasyidk/sugar_counting",
       "demo": "",
       "category": "AI/ML",
@@ -33,11 +104,17 @@
       ]
     },
     {
-      "id": "03",
+      "id": "06",
       "title": "Smart Surveillance System",
       "description": "Smart surveillance system with real-time object detection and tracking capabilities, designed and deployed for enhanced security monitoring at GYS facilities.",
       "image": "/projects/surveillance.png",
-      "tags": ["Python", "Computer Vision", "YOLO", "Real-time", "Surveillance"],
+      "tags": [
+        "Python",
+        "Computer Vision",
+        "YOLO",
+        "Real-time",
+        "Surveillance"
+      ],
       "github": "",
       "demo": "",
       "category": "Computer Vision",
@@ -49,11 +126,17 @@
       ]
     },
     {
-      "id": "04",
+      "id": "07",
       "title": "Scanocular",
       "description": "AI-based mobile application for early detection of eye diseases like cataracts, glaucoma, and diabetic retinopathy using just a smartphone camera.",
       "image": "/projects/scanocular.png",
-      "tags": ["Python", "YOLOv8", "React Native", "Tailwind", "Solidity"],
+      "tags": [
+        "Python",
+        "YOLOv8",
+        "React Native",
+        "Tailwind",
+        "Solidity"
+      ],
       "github": "https://github.com/rasyidk/ScanOcular_backend",
       "demo": "",
       "category": "AI/ML",
@@ -65,27 +148,16 @@
       ]
     },
     {
-      "id": "05",
-      "title": "Yayasan Harmoni Semesta Lestari",
-      "description": "Web-based information system developed to support administrative management and operational digitalization for an organizational foundation.",
-      "image": "/projects/yayasan.png",
-      "tags": ["Express.js", "MySQL", "Node.js", "RESTful API"],
-      "github": "",
-      "demo": "https://demo-semesta-lestari.vercel.app/",
-      "category": "Website",
-      "contributions": [
-        "Architected a structured backend system using Express.js to ensure efficient data management and system performance ",
-        "Designed and implemented RESTful APIs to support all organizational system functionalities ",
-        "Managed complex database operations for storing and processing organizational data using MySQL ",
-        "Implemented secure authentication and authorization mechanisms for both administrators and regular users "
-      ]
-    },
-    {
-      "id": "06",
+      "id": "08",
       "title": "Dreambooth",
       "description": "Self-service photobooth platform consisting of a web-based management dashboard and a high-performance desktop kiosk application.",
       "image": "/projects/dreambooth.png",
-      "tags": ["Next.js", "MongoDB", "Electron.js", "Tailwind CSS"],
+      "tags": [
+        "Next.js",
+        "MongoDB",
+        "Electron.js",
+        "Tailwind CSS"
+      ],
       "github": "",
       "demo": "https://dreamboothstudio.vercel.app/",
       "category": "Website",
@@ -97,11 +169,17 @@
       ]
     },
     {
-      "id": "07",
+      "id": "09",
       "title": "LMS BP2MI",
       "description": "Learning Management System specifically tailored for Indonesian migrant workers and civil servants, serving approximately 3,000 users.",
       "image": "/projects/lms.png",
-      "tags": ["Laravel", "Jenkins", "Docker", "MySQL", "Ubuntu Server"],
+      "tags": [
+        "Laravel",
+        "Jenkins",
+        "Docker",
+        "MySQL",
+        "Ubuntu Server"
+      ],
       "github": "",
       "demo": "https://siappintar.bp2mi.go.id/",
       "category": "Website",
@@ -113,11 +191,16 @@
       ]
     },
     {
-      "id": "08",
+      "id": "10",
       "title": "PPSMB Pionir Gadjah Mada",
       "description": "Information website for new student orientation at Universitas Gadjah Mada, featuring Augmented Reality for campus tours.",
       "image": "/projects/ppsmb.png",
-      "tags": ["Next.JS", "Strapi", "AR.JS", "Augmented Reality"],
+      "tags": [
+        "Next.JS",
+        "Strapi",
+        "AR.JS",
+        "Augmented Reality"
+      ],
       "github": "",
       "demo": "",
       "category": "Website",
@@ -129,11 +212,17 @@
       ]
     },
     {
-      "id": "09",
+      "id": "11",
       "title": "Covchain",
       "description": "Blockchain-based COVID-19 vaccine tracking application designed to prevent data falsification and ensure supply chain transparency.",
       "image": "/projects/covchain.png",
-      "tags": ["Java", "VEXANIUM", "Blockchain", "Smart Contracts", "Python"],
+      "tags": [
+        "Java",
+        "VEXANIUM",
+        "Blockchain",
+        "Smart Contracts",
+        "Python"
+      ],
       "github": "https://github.com/rasyidk/covchainApp",
       "demo": "",
       "category": "Mobile App",
@@ -145,11 +234,17 @@
       ]
     },
     {
-      "id": "10",
+      "id": "12",
       "title": "Reconchain",
       "description": "Blockchain-based mobile application designed to track carbon emissions produced by specific products.",
       "image": "/projects/reconchain.png",
-      "tags": ["Java", "Solidity", "Polygon", "Django", "Blockchain"],
+      "tags": [
+        "Java",
+        "Solidity",
+        "Polygon",
+        "Django",
+        "Blockchain"
+      ],
       "github": "https://github.com/rasyidk/reconchain",
       "demo": "",
       "category": "Mobile App",
@@ -161,11 +256,15 @@
       ]
     },
     {
-      "id": "11",
+      "id": "13",
       "title": "PORSENIGAMA 2023",
       "description": "A web-based platform for information and athlete registration during the Porsenigama event, designed to handle large-scale student participation and real-time competition tracking.",
       "image": "/projects/porsenigama.png",
-      "tags": ["Next.JS", "Strapi", "Project Management"],
+      "tags": [
+        "Next.JS",
+        "Strapi",
+        "Project Management"
+      ],
       "github": "",
       "demo": "https://ukm.ugm.ac.id/2023/porsenigama/",
       "category": "Website",
@@ -177,11 +276,16 @@
       ]
     },
     {
-      "id": "12",
+      "id": "14",
       "title": "Herbacare",
       "description": "A health-tech platform focused on herbal medicine and natural remedies, providing a comprehensive database and consultation features for traditional healthcare solutions.",
       "image": "/projects/herbacare.png",
-      "tags": ["Express.js", "Node.js", "MySQL", "RESTful API"],
+      "tags": [
+        "Express.js",
+        "Node.js",
+        "MySQL",
+        "RESTful API"
+      ],
       "github": "https://github.com/pudyasta/herbacare",
       "demo": "",
       "category": "Website",
@@ -193,11 +297,15 @@
       ]
     },
     {
-      "id": "13",
+      "id": "15",
       "title": "GoPay: Stop Online Gambling Microsite",
       "description": "A high-traffic educational microsite developed for GoPay to raise awareness about the dangers of online gambling, featuring interactive content and optimized for a seamless user experience.",
       "image": "/projects/gopay.png",
-      "tags": ["Vue.JS", "Nuxt.JS", "Frontend Development"],
+      "tags": [
+        "Vue.JS",
+        "Nuxt.JS",
+        "Frontend Development"
+      ],
       "github": "",
       "demo": "https://judipastirugi.com/",
       "category": "Website",

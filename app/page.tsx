@@ -20,7 +20,7 @@ export default function Home() {
   const aboutData = {
     bio: 'Passionate software engineer specializing in AI/ML and Software Development. I create innovative solutions that leverage cutting-edge technologies.',
     stats: [
-      { value: '3.90', label: 'GPA' },
+      { value: '3.91', label: 'GPA' },
       { value: '4+', label: 'YEARS EXPERIENCE' },
       { value: '10+', label: 'PROJECTS' },
       { value: '100%', label: 'CLIENT SATISFACTION' },
